@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+*,html,body{
+    margin:0;
+    padding:0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size:15px;
+    box-sizing: border-box;
+}
+
+
+.container{
+    position: absolute;
+    max-width:900px;
+    margin: auto;
+    display: flex;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.cards{
+    position:relative;
+    min-width:1rem;
+    height:300px;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+
+.cards div{
+    min-width:50px;
+    min-height:50px;
+    margin:12px auto auto 12px;
+}
+
+#sedans{
+    background: hsl(31, 77%, 52%);
+}
+
+#luxury{
+    background: hsl(184, 100%, 22%);
+}
+
+#suvs{
+    background: hsl(179, 100%, 13%);
+}
+
+.title{
+    font-weight:800;
+}
+
+.description p{
+   font-weight: 100;
+   font-size: 12px;
+}
+
+.learn-more{
+    background: white;
+    color:white;
+    border:2px solid white;
+    border-radius: 20px;
+    margin:20px 0 0 0;
+    padding:8px;
+    width:120px;
+}
+
+#sedans .learn-more{
+    color:hsl(31, 77%, 52%);
+}
+
+#suvs .learn-more{
+    color:hsl(179, 100%, 13%);
+}
+
+#luxury .learn-more{
+    color:hsl(179, 100%, 13%);
+}
+
+#sedans button:hover,#suvs button:hover,#luxury button:hover{
+    background:none;
+    color:white;
+}
+
+#sedans{
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+}
+#luxury{
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+
+
+@media (max-width:700px) {
+    .container{
+        flex-wrap: wrap;
+        margin:50%  auto -50%;
+    }
+
+    #sedans{
+        border-radius: 10px 10px 0 0;
+    }
+    #luxury{
+        border-radius: 0 0 10px 10px;
+    }
+
+}
